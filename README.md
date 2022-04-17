@@ -88,17 +88,6 @@ defmodule TimeCalculator do
     }
   end
 
-  @doc "Convert a string in HH:MM:SS format to `TimeCalculator` struct"
-  def clock_to_time(time) do
-    tokens = String.split(time, ":")
-
-    %TC{
-      hours: String.to_integer(Enum.at(tokens, 0)),
-      minutes: String.to_integer(Enum.at(tokens, 1)),
-      seconds: String.to_integer(Enum.at(tokens, 2))
-    }
-  end
-
   defp hours_in_seconds(seconds) do
     floor(seconds / (60 * 60))
   end
