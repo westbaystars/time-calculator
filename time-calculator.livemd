@@ -136,6 +136,20 @@ IO.puts(
 )
 ```
 
+The output should look something like this:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+Test Results
+is 1 hour, 3 minutes, 45 seconds = 3,825 seconds? 3825
+is 0 hours, 59 minutes, 59 seconds = 3,599 seconds? 3599
+is 2 hours, 91 minutes, -60 seconds = 3.5 hours = 12,600 seconds? 12600
+is 3,825 second = %{hours: 1, minutes: 3, seconds: 45}? %TimeCalculator{hours: 1, minutes: 3, seconds: 45}
+is 3,599 seconds = %{hours: 0, minutes: 59, seconds: 59}? %TimeCalculator{hours: 0, minutes: 59, seconds: 59}
+is 12,600 seconds = %{hours: 3, minutes: 30, seconds: 0}? %TimeCalculator{hours: 3, minutes: 30, seconds: 0}
+```
+
 ## User Input
 
 The test cases above all appear to work. Excellent.
