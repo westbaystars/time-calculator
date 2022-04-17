@@ -103,7 +103,9 @@ Before going any further, I'd like to quickly run some tests to make sure that t
 calculations are working properly.
 
 Notice that values can be negative within the `TimeCalculator` structure? I don't consider 
-that to be bug but a feature. It's like saying "quarter to noon" can be expressed either 
+that to be bug but a feature. The structure is for carrying information that resembles
+digits on a clock, without actually being a specific time, which it can also represent.
+It's like saying "quarter to noon" can be expressed either 
 `%{hours: 11, minutes: 45, seconds: 0}` or `%{hours: 12, minutes: -15, seconds: 0}`.
 
 ```elixir
