@@ -174,7 +174,7 @@ for %{data: data} <- Kino.Control.stream(form) do
   result =
     times
     |> String.split("\n")
-    |> Enum.reduce(0, fn time, secs -> secs + TC.csv_to_seconds(time) end)
+    |> Enum.reduce(0, fn time, secs -> secs + TC.clock_to_seconds(time) end)
     |> TC.seconds_to_time()
 
   Kino.Frame.render(frame, result)
